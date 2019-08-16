@@ -2,13 +2,12 @@ library(readr)
 library(magrittr)
 library(tidyverse)
 
-export_path <- "previdencia_06-08-21h"
-name_txt <- "previdencia_06-08-21h"
+file_name <- "previdencia_07-08-17h"
 
-previdencia <- read.csv(paste0("../raspagem-tratamento-dados/data/", name_txt, ".txt"), sep = "|")
+previdencia <- read.csv(paste0("../raspagem-tratamento-dados/data/process-texts/", file_name, "-PT.txt"), sep = "|")
 
-previdencia <- previdencia %>% 
-  mutate(data = "06/08/2019",
-         id_sessao = 207)
+previdencia <- previdencia %>%
+  mutate(data = "07/08/2019",
+         id_sessao = 210)
 
-write_csv(previdencia, paste0("data/", export_path, ".csv"))
+write_csv(previdencia, paste0("data/", file_name, ".csv"))
