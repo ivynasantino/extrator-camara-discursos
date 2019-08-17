@@ -1,18 +1,62 @@
 ---
-title: "R Notebook"
+title: "Análise expoloratória dos discursos referente as sessões em Plenário da PEC 06/2019"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
-
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
-
-```{r}
-plot(cars)
+```{r, message=FALSE, include=FALSE, warning=FALSE}
+library(tidyverse)
+library(readr)
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+```{r, message=FALSE, warning=FALSE}
+previdencia_06_08_19h <- read_csv("../data/process-data/previdencia_06-08-19h.csv")
+previdencia_06_08_21h <- read_csv("../data/process-data/previdencia_06-08-21h.csv")
+previdencia_07_08_17h <- read_csv("../data/process-data/previdencia_07-08-17h.csv")
+previdencia_07_08_9h <- read_csv("../data/process-data/previdencia_07-08-9h.csv")
+previdencia_09_07_16h <- read_csv("../data/process-data/previdencia_09-07-16h.csv")
+previdencia_09_07_20h <- read_csv("../data/process-data/previdencia_09-07-20h.csv")
+previdencia_10_07_16h <- read_csv("../data/process-data/previdencia_10-07-16h.csv")
+previdencia_10_07_9h <- read_csv("../data/process-data/previdencia_10-07-9h.csv")
+previdencia_11_07_9h <- read_csv("../data/process-data/previdencia_11-07-9h.csv")
+previdencia_11_07_22h <- read_csv("../data/process-data/previdencia_11-07-22h.csv")
+previdencia_12_07_16h <- read_csv("../data/process-data/previdencia_12-07-16h.csv")
+previdencia_12_07_9h <- read_csv("../data/process-data/previdencia_12-07-9h.csv")
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+previdencia <- bind_rows(previdencia_06_08_19h,
+                         previdencia_06_08_21h,
+                         previdencia_07_08_9h,
+                         previdencia_07_08_17h,
+                         previdencia_09_07_16h,
+                         previdencia_09_07_20h,
+                         previdencia_10_07_9h,
+                         previdencia_10_07_16h,
+                         previdencia_11_07_9h,
+                         previdencia_11_07_22h,
+                         previdencia_12_07_9h,
+                         previdencia_12_07_16h)
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+```
+
+```{r, message=FALSE, warning=FALSE}
+
+```
+
+```{r, message=FALSE, warning=FALSE}
+
+```
+
+```{r, message=FALSE, warning=FALSE}
+
+```
+
+```{r, message=FALSE, warning=FALSE}
+
+```
+
+```{r, message=FALSE, warning=FALSE}
+
+```
+
+```{r, message=FALSE, warning=FALSE}
+
+```
