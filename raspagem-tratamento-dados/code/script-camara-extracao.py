@@ -76,11 +76,12 @@ def parseSessao(sessao, presidente):
 
     return resultado
 
-DOC = "previdencia_07-08-17h"
+DOC = "ccjc_reuniao-16-04-2019_10h"
+presidente = "Felipe Francischini"
 
 def main():
     sessao = arquivoParaString("../data/extract-texts-pdf/"+DOC+".txt")
-    parsed = parseSessao(sessao, "Rodrigo Maia")
+    parsed = parseSessao(sessao, presidente)
     escreveListaEmArquivo(parsed, "../data/process-texts/"+DOC+"-PT.txt")
 
 
