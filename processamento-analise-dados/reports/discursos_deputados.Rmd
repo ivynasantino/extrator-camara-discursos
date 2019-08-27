@@ -37,6 +37,12 @@ previdencia <- bind_rows(previdencia_06_08_19h,
 
 ```
 
+Questionamentos:
+
+- Quais parlamentares falam mais/menos?(Contar quantas vezes eles aparecem e palavras em seus discursos)
+- Quais partidos falam mais/menos?
+- Quais são as palavras mais utilizadas? Se for possível gerar visu por partido e parlamentar.
+
 ```{r, message=FALSE, warning=FALSE}
 
 ```
