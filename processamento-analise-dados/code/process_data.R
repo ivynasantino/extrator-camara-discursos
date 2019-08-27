@@ -2,13 +2,12 @@ library(readr)
 library(tidyverse)
 library(magrittr)
 
-file_name <- "previdencia_09-07-20h.csv"
+file_name <- "ccjc_reuniao-16-04-2019_10h.csv"
 previdencia <- read_csv(paste0("data/build-data/", file_name))
 
 process_previdencia <- previdencia %>% 
   mutate(partido_autor = ifelse(partido == "B", "PcdoB", partido)) %>% 
-  select(id_sessao,
-         data,
+  select(data,
          autor,
          partido = partido_autor,
          uf,
