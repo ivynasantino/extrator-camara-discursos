@@ -1,51 +1,67 @@
 ### Materiais de apoio
 
-- [O que são emendas parlamentares. E o uso delas na reforma](https://www.nexojornal.com.br/expresso/2019/07/11/O-que-s%C3%A3o-emendas-parlamentares.-E-o-uso-delas-na-reforma)
+#### [Repositório de Word Embeddings do NILC](http://nilc.icmc.usp.br/embeddings)
 
+#### Entendendo a Nova previdência:
+- [O que são emendas parlamentares. E o uso delas na reforma](https://www.nexojornal.com.br/expresso/2019/07/11/O-que-s%C3%A3o-emendas-parlamentares.-E-o-uso-delas-na-reforma)
 
 - [Quais as chances de o Senado alterar a reforma da Previdência](https://www.nexojornal.com.br/expresso/2019/07/14/Quais-as-chances-de-o-Senado-alterar-a-reforma-da-Previd%C3%AAncia)
 
-
 - [O que mudou na reforma aprovada na Câmara em 5 gráficos](https://www.nexojornal.com.br/expresso/2019/07/12/O-que-mudou-na-reforma-aprovada-na-C%C3%A2mara-em-5-gr%C3%A1ficos)
 
+#### Artigos
 
-- Classificador python
+- [Análise de Sentimento usando a Representação Distribuída de Parágrafos para o Português](http://dspace.unipampa.edu.br/bitstream/riu/1601/1/An%C3%A1lise%20de%20sentimento%20usando%20a%20representa%C3%A7%C3%A3o%20distribu%C3%ADda%20de%20par%C3%A1grafos%20para%20o%20portugu%C3%AAs.pdf)
 
-https://gabrielschade.github.io/2018/04/16/machine-learning-classificador.html
+- [CLASSIFICAÇÃO DE DOCUMENTOS DE PATENTES USANDO O DOC2VEC](https://ssl4799.websiteseguro.com/swge5/PROCEEDINGS/PDF/CBA2018-0986.pdf)
 
-https://www.lambda3.com.br/2019/04/inteligencia-artificial-como-fazer-analise-de-sentimentos-com-python-parte-1/
+- [Word Embeddings through Hellinger PCA](https://www.aclweb.org/anthology/E14-1051)
 
-https://medium.com/@alegeorgelustosa/an%C3%A1lise-de-sentimentos-e-introdu%C3%A7%C3%A3o-a-nlp-com-python-amazon-yelp-imdb-28a8a66d78cf
+- [Detecção de tweets sobre Eventos de
+Trânsito usando Word Embedding](https://lume.ufrgs.br/bitstream/handle/10183/185073/001077707.pdf?sequence=1&isAllowed=y)
 
-https://medium.com/@alegeorgelustosa/an%C3%A1lise-de-sentimentos-em-python-2a7d04a836e0
+#### Posts
+##### 1. Word2Vec
 
-Artigos
-http://www.sbrc2018.ufscar.br/wp-content/uploads/2018/04/179409.pdf
+- [Word2Vec For Phrases — Learning Embeddings For More Than One Word](https://towardsdatascience.com/word2vec-for-phrases-learning-embeddings-for-more-than-one-word-727b6cf723cf)
 
-https://sillasgonzaga.github.io/2017-09-23-sensacionalista-pt01/
+##### 2. Doc2Vec
+- [DOC2VEC gensim tutorial](https://medium.com/@mishra.thedeepak/doc2vec-simple-implementation-example-df2afbbfbad5)
 
-Doc2Vec
-https://medium.com/@mishra.thedeepak/doc2vec-simple-implementation-example-df2afbbfbad5
+- [Doc2vec in a simple way](https://medium.com/@mishra.thedeepak/doc2vec-in-a-simple-way-fa80bfe81104)
 
-https://medium.com/@mishra.thedeepak/doc2vec-in-a-simple-way-fa80bfe81104
+- [Implementing multi-class text classification with Doc2Vec](https://towardsdatascience.com/implementing-multi-class-text-classification-with-doc2vec-df7c3812824d)
 
-https://towardsdatascience.com/implementing-multi-class-text-classification-with-doc2vec-df7c3812824d
+- [Gensim Tutorial-2: Word2Vec and Doc2Vec](https://turgutozkan.org/2018/11/21/gensim-tutorial-2-word2vec-and-doc2vec/)
 
-https://turgutozkan.org/2018/11/21/gensim-tutorial-2-word2vec-and-doc2vec/
+- [Implementing Deep Learning Methods and Feature Engineering for Text Data: The Skip-gram Model](https://www.kdnuggets.com/2018/04/implementing-deep-learning-methods-feature-engineering-text-data-skip-gram.html)
 
-https://github.com/RaRe-Technologies/gensim/blob/ca0dcaa1eca8b1764f6456adac5719309e0d8e6d/docs/notebooks/doc2vec-IMDB.ipynb
+- [Gensim Doc2Vec Tutorial on the IMDB Sentiment Dataset](https://github.com/RaRe-Technologies/gensim/blob/ca0dcaa1eca8b1764f6456adac5719309e0d8e6d/docs/notebooks/doc2vec-IMDB.ipynb)
 
-https://kanoki.org/2019/03/07/sentence-similarity-in-python-using-doc2vec/
+- [Sentence Similarity in Python using Doc2Vec](https://kanoki.org/2019/03/07/sentence-similarity-in-python-using-doc2vec/)
 
-https://turgutozkan.org/2018/11/21/gensim-tutorial-2-word2vec-and-doc2vec/
+- [Doc2Vec Model for Sentiment Analysis](https://medium.com/zykrrtech/sentiment-analysis-using-doc2vec-model-7af08ea521fe)
 
-https://medium.com/zykrrtech/sentiment-analysis-using-doc2vec-model-7af08ea521fe
+- [Sentiment Analysis Using Doc2Vec](https://linanqiu.github.io/2015/10/07/word2vec-sentiment/)
 
-https://linanqiu.github.io/2015/10/07/word2vec-sentiment/
+- [Twitter Sentiment Analysis - word2vec, doc2vec](https://www.kaggle.com/nitin194/twitter-sentiment-analysis-word2vec-doc2vec)
 
-https://www.kaggle.com/nitin194/twitter-sentiment-analysis-word2vec-doc2vec
+##### 3. PCA
+- [Another Twitter sentiment analysis with Python — Part 8 (Dimensionality reduction: Chi2, PCA)](https://towardsdatascience.com/another-twitter-sentiment-analysis-with-python-part-8-dimensionality-reduction-chi2-pca-c6d06fb3fcf3)
 
-https://towardsdatascience.com/word2vec-for-phrases-learning-embeddings-for-more-than-one-word-727b6cf723cf
+- [PCA and SVD explained with numpy](https://towardsdatascience.com/pca-and-svd-explained-with-numpy-5d13b0d2a4d8)
 
-https://towardsdatascience.com/another-twitter-sentiment-analysis-with-python-part-8-dimensionality-reduction-chi2-pca-c6d06fb3fcf3
+- [Word vector and PCA](https://medium.com/@jayeshbahire/introduction-to-word-vectors-ea1d4e4b84bf)
+
+- [Principal Component Analysis with Python](https://www.geeksforgeeks.org/principal-component-analysis-with-python/)
+
+- [Principal Component Analysis(PCA)](https://www.geeksforgeeks.org/ml-principal-component-analysispca/)
+
+##### 4. T-SNE
+
+##### 5. EDA
+
+- [Text Analysis in Python 3](https://www.geeksforgeeks.org/text-analysis-in-python-3/)
+
+- [NLP analysis of Restaurant reviews](https://www.geeksforgeeks.org/python-nlp-analysis-of-restaurant-reviews/)
 
