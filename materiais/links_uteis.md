@@ -25,6 +25,8 @@ Trânsito usando Word Embedding](https://lume.ufrgs.br/bitstream/handle/10183/18
 
 - [Word2Vec For Phrases — Learning Embeddings For More Than One Word](https://towardsdatascience.com/word2vec-for-phrases-learning-embeddings-for-more-than-one-word-727b6cf723cf)
 
+- [Lab. recinfo - word2vec](https://github.com/LiviaCavalcanti/RecInfo/blob/master/lab7/word2vec.ipynb)
+
 ##### 2. Doc2Vec
 - [DOC2VEC gensim tutorial](https://medium.com/@mishra.thedeepak/doc2vec-simple-implementation-example-df2afbbfbad5)
 
