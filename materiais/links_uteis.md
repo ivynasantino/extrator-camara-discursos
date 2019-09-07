@@ -20,6 +20,16 @@
 - [Detecção de tweets sobre Eventos de
 Trânsito usando Word Embedding](https://lume.ufrgs.br/bitstream/handle/10183/185073/001077707.pdf?sequence=1&isAllowed=y)
 
+- [O USO DO TWITTER PELOS DEPUTADOS FEDERAIS BRASILEIROS:
+estudo sobre atuação e tendências de comportamento](http://bd.camara.gov.br/bd/bitstream/handle/bdcamara/10514/uso_twitter_silva.pdf?sequence=1)
+
+- [Análise de conteúdo dos tweets da família de Bolsonaro](https://osf.io/a9wqy/download)
+
+- [TCCs 2019.1 - DSC](http://www.computacao.ufcg.edu.br/graduacao/tcc/tcc-2019-1)
+
+- [Sentiment Analysis of Twitter Messages
+Using Word2Vec](https://pdfs.semanticscholar.org/784d/1b2aebda3b80567bf8244e89499c31cf42a9.pdf)
+
 #### Posts
 ##### 1. Word2Vec
 
@@ -69,3 +79,8 @@ Trânsito usando Word Embedding](https://lume.ufrgs.br/bitstream/handle/10183/18
 
 - [NLP analysis of Restaurant reviews](https://www.geeksforgeeks.org/python-nlp-analysis-of-restaurant-reviews/)
 
+- [Infográfico - O que 15mil tweets mostram dos políticos](https://infograficos.estadao.com.br/politica/eleicoes/2018/o-que-15-mil-tweets-revelam-sobre-seu-candidato/)
+
+##### Outros:
+
+- [IA - Discursos de deputados: TensorFlow](https://github.com/GuitarsAI/AI_DeputiesSpeeches)
