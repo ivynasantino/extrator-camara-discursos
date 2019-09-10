@@ -1,6 +1,7 @@
 ### Materiais de apoio
 
 #### [Repositório de Word Embeddings do NILC](http://nilc.icmc.usp.br/embeddings)
+#### [Repositório de modelos w2v - wikipedia](https://github.com/Kyubyong/wordvectors)
 
 #### Entendendo a Nova previdência:
 - [O que são emendas parlamentares. E o uso delas na reforma](https://www.nexojornal.com.br/expresso/2019/07/11/O-que-s%C3%A3o-emendas-parlamentares.-E-o-uso-delas-na-reforma)
@@ -87,3 +88,5 @@ the Speed of a Law Project Promulgation](https://github.com/analytics-ufcg/leggo
 ##### Outros:
 
 - [IA - Discursos de deputados: TensorFlow](https://github.com/GuitarsAI/AI_DeputiesSpeeches)
+
+- [Introdução a WE - vídeo](https://www.youtube.com/watch?v=EVMIR6siWbI&feature=youtu.be)
