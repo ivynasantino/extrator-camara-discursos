@@ -13,12 +13,11 @@
 
 - [Análise de Sentimento usando a Representação Distribuída de Parágrafos para o Português](http://dspace.unipampa.edu.br/bitstream/riu/1601/1/An%C3%A1lise%20de%20sentimento%20usando%20a%20representa%C3%A7%C3%A3o%20distribu%C3%ADda%20de%20par%C3%A1grafos%20para%20o%20portugu%C3%AAs.pdf)
 
-- [CLASSIFICAÇÃO DE DOCUMENTOS DE PATENTES USANDO O DOC2VEC](https://ssl4799.websiteseguro.com/swge5/PROCEEDINGS/PDF/CBA2018-0986.pdf)
+- [**CLASSIFICAÇÃO DE DOCUMENTOS DE PATENTES USANDO O DOC2VEC**](https://ssl4799.websiteseguro.com/swge5/PROCEEDINGS/PDF/CBA2018-0986.pdf)
 
-- [Word Embeddings through Hellinger PCA](https://www.aclweb.org/anthology/E14-1051)
+- [**Word Embeddings through Hellinger PCA**](https://www.aclweb.org/anthology/E14-1051)
 
-- [Detecção de tweets sobre Eventos de
-Trânsito usando Word Embedding](https://lume.ufrgs.br/bitstream/handle/10183/185073/001077707.pdf?sequence=1&isAllowed=y)
+- [**Detecção de tweets sobre Eventos de Trânsito usando Word Embedding**](https://lume.ufrgs.br/bitstream/handle/10183/185073/001077707.pdf?sequence=1&isAllowed=y)
 
 - [O USO DO TWITTER PELOS DEPUTADOS FEDERAIS BRASILEIROS:
 estudo sobre atuação e tendências de comportamento](http://bd.camara.gov.br/bd/bitstream/handle/bdcamara/10514/uso_twitter_silva.pdf?sequence=1)
@@ -27,8 +26,12 @@ estudo sobre atuação e tendências de comportamento](http://bd.camara.gov.br/b
 
 - [TCCs 2019.1 - DSC](http://www.computacao.ufcg.edu.br/graduacao/tcc/tcc-2019-1)
 
-- [Sentiment Analysis of Twitter Messages
-Using Word2Vec](https://pdfs.semanticscholar.org/784d/1b2aebda3b80567bf8244e89499c31cf42a9.pdf)
+- [**Sentiment Analysis of Twitter Messages Using Word2Vec**](https://pdfs.semanticscholar.org/784d/1b2aebda3b80567bf8244e89499c31cf42a9.pdf)
+
+- [**Análise de discursos de deputados via Modelos Linguísticos**](https://github.com/analytics-ufcg/leggo-content/blob/master/artigos/finalPedroDallaVecchiaChaves.pdf)
+
+- [An NLP Approach for Detecting a Link Between Text Coherence and
+the Speed of a Law Project Promulgation](https://github.com/analytics-ufcg/leggo-content/blob/master/artigos/NLP_Article.pdf)
 
 #### Posts
 ##### 1. Word2Vec
