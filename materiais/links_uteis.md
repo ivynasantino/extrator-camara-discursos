@@ -43,6 +43,8 @@ the Speed of a Law Project Promulgation](https://github.com/analytics-ufcg/leggo
 
 - [Usando o Word2vec para recomendações de música](https://towardsdatascience.com/using-word2vec-for-music-recommendations-bb9649ac2484)
 
+- [Tutorial de como usar w2v](https://www.kaggle.com/liananapalkova/simply-about-word2vec)
+
 ##### 2. Doc2Vec
 - [DOC2VEC gensim tutorial](https://medium.com/@mishra.thedeepak/doc2vec-simple-implementation-example-df2afbbfbad5)
 
