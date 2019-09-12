@@ -6,6 +6,9 @@ output: html_notebook
 ```{r, message=FALSE, include=FALSE, warning=FALSE}
 library(tidyverse)
 library(readr)
+library(tm)
+library(SnowballC)
+library(wordcloud)
 ```
 
 ```{r, message=FALSE, warning=FALSE}
@@ -22,7 +25,7 @@ previdencia_11_07_22h <- read_csv("../data/process-data/previdencia_11-07-22h.cs
 previdencia_12_07_16h <- read_csv("../data/process-data/previdencia_12-07-16h.csv")
 previdencia_12_07_9h <- read_csv("../data/process-data/previdencia_12-07-9h.csv")
 
-previdencia <- bind_rows(previdencia_06_08_19h,
+plenario_previdencia <- bind_rows(previdencia_06_08_19h,
                          previdencia_06_08_21h,
                          previdencia_07_08_9h,
                          previdencia_07_08_17h,
@@ -33,8 +36,45 @@ previdencia <- bind_rows(previdencia_06_08_19h,
                          previdencia_11_07_9h,
                          previdencia_11_07_22h,
                          previdencia_12_07_9h,
-                         previdencia_12_07_16h)
+                         previdencia_12_07_16h) %>% 
+  select(-id_sessao)
 
+```
+
+```{r, message=FALSE, warning=FALSE}
+ce_02_07_19 <- read_csv("../data/process-data/ce_reuniao-02-07-2019_16h.csv")
+ce_03_07_19 <- read_csv("../data/process-data/ce_reuniao-03-07-2019_19h.csv")
+ce_04_07_19 <- read_csv("../data/process-data/ce_reuniao-04-07-2019_10h.csv")
+ce_12_07_19 <- read_csv("../data/process-data/ce_reuniao-12-07-2019_20h.csv")
+ce_13_06_19 <- read_csv("../data/process-data/ce_reuniao-13-06-2019_15h.csv")
+ce_18_06_19 <- read_csv("../data/process-data/ce_reuniao-18-06-2019_9h.csv")
+ce_25_06_19 <- read_csv("../data/process-data/ce_reuniao-25-06-2019_9h.csv")
+ce_26_06_19 <- read_csv("../data/process-data/ce_reuniao-26-06-2019_12h.csv")
+
+ce_previdencia <- bind_rows(ce_02_07_19,
+                            ce_03_07_19,
+                            ce_04_07_19,
+                            ce_12_07_19,
+                            ce_13_06_19,
+                            ce_18_06_19,
+                            ce_25_06_19,
+                            ce_26_06_19)
+```
+
+```{r, message=FALSE, warning=FALSE}
+ccjc_09_04_2019 <- read_csv("../data/process-data/ccjc_reuniao-09-04-2019_20h.csv")
+ccjc_16_04_2019 <- read_csv("../data/process-data/ccjc_reuniao-16-04-2019_10h.csv")
+ccjc_23_04_2019 <- read_csv("../data/process-data/ccjc_reuniao-23-04-2019_15h.csv")
+
+ccjc_previdencia <- bind_rows(ccjc_09_04_2019,
+                              ccjc_16_04_2019,
+                              ccjc_23_04_2019)
+```
+
+```{r, message=FALSE, warning=FALSE}
+all_discursos <- bind_rows(ccjc_previdencia,
+                           ce_previdencia,
+                           plenario_previdencia)
 ```
 
 Questionamentos:
@@ -42,9 +82,133 @@ Questionamentos:
 - Quais parlamentares falam mais/menos?(Contar quantas vezes eles aparecem e palavras em seus discursos)
 - Quais partidos falam mais/menos?
 - Quais são as palavras mais utilizadas? Se for possível gerar visu por partido e parlamentar.
+- Wordcloud de parlamentares mais atuantes e dos presidentes de cada etapa
 
 ```{r, message=FALSE, warning=FALSE}
+cont_palavras <- all_discursos %>% 
+  mutate(qtd_palavras = sapply(strsplit(discurso, " "), length))
+```
 
+Top 5 dos mais falantes
+```{r, message=FALSE, warning=FALSE}
+mais_falantes <- cont_palavras %>% 
+  group_by(autor) %>% 
+  summarise(all_qtd_palavra = sum(qtd_palavras)) %>% 
+  arrange(-all_qtd_palavra) %>% 
+  top_n(5)
+
+mais_falantes
+```
+
+Top 5 dos menos falantes
+```{r, message=FALSE, warning=FALSE}
+menos_falantes <- cont_palavras %>% 
+  group_by(autor) %>% 
+  summarise(all_qtd_palavra = sum(qtd_palavras)) %>%
+  filter(all_qtd_palavra > 2) %>%  
+  arrange(all_qtd_palavra) %>% 
+  top_n(-5)
+
+menos_falantes
+```
+
+Top 5 dos partidos mais falantes
+```{r, message=FALSE, warning=FALSE}
+partidos_mais_falantes <- cont_palavras %>% 
+  group_by(partido) %>% 
+  summarise(all_qtd_palavra = sum(qtd_palavras)) %>% 
+  filter(!partido %in% c(NA, "N/A")) %>% 
+  arrange(-all_qtd_palavra) %>% 
+  top_n(5)
+
+partidos_mais_falantes
+```
+
+Top 5 dos partidos menos falantes
+```{r, message=FALSE, warning=FALSE}
+partidos_menos_falantes <- cont_palavras %>% 
+  group_by(partido) %>% 
+  summarise(all_qtd_palavra = sum(qtd_palavras)) %>% 
+  filter(!partido %in% c(NA, "N/A")) %>% 
+  arrange(all_qtd_palavra) %>% 
+  top_n(-5)
+
+partidos_menos_falantes
+```
+
+```{r, message=FALSE, warning=FALSE}
+toninho_mais_falante <- cont_palavras %>% 
+  filter(autor == "TONINHO WANDSCHEER")
+
+all_discursos_toninho <- toninho_mais_falante %>% 
+  group_by(autor, partido, uf) %>% 
+  summarise(all_discursos = paste(unlist(t(discurso)),collapse=" "))
+
+pt_mais_falante <- cont_palavras %>% 
+  filter(partido == "PT")
+
+all_discursos_pt <- pt_mais_falante %>% 
+  group_by(partido) %>% 
+  summarise(all_discursos = paste(unlist(t(discurso)),collapse=" "))
+```
+
+```{r, message=FALSE, warning=FALSE}
+transformacao_texto <- function(docs) {
+  toSpace <- content_transformer(function (x , pattern ) gsub(pattern, " ", x))
+  text_transf <- tm_map(docs, toSpace, "/")
+  text_transf <- tm_map(docs, toSpace, "@")
+  text_transf <- tm_map(docs, toSpace, "\\|")
+  
+  return(text_transf)
+}
+
+formata_texto <- function(docs) {
+  text_format <- tm_map(docs, content_transformer(tolower))
+  text_format <- tm_map(docs, removeNumbers)
+  text_format <- tm_map(docs, removeWords, stopwords("pt"))
+  text_format <- tm_map(docs, removeWords, c("", "neste","és", "é", "somos", 
+                                      "sois", "são", "era", "eras", "éreis", 
+                                      "foste", "fostes", "foras",	"fôreis",	
+                                      "serás", "sereis", "serão",	"serias", 
+                                      "seríeis", "sejas", "sejais", "fosses", 
+                                      "fôsseis", "fores", "fordes", "sê", "sejas", 
+                                      "sejais", "ser", "seres", "sermos",	"serdes",	
+                                      "serem", "sobre", "é")) 
+
+  text_format <- tm_map(docs, removePunctuation)
+  text_format <- tm_map(docs, stripWhitespace)
+  
+  return(text_format)
+}
+
+termo_doc_matriz <- function(docs) {
+  dtm <- TermDocumentMatrix(docs)
+  m <- as.matrix(dtm)
+  v <- sort(rowSums(m),decreasing=TRUE)
+  df <- data.frame(word = names(v),freq=v)
+  
+  return(df)
+}
+
+gera_word_cloud <- function(df) {
+  docs <- Corpus(VectorSource(df))
+  text_transf <- transformacao_texto(docs)
+  text_format <- formata_texto(text_transf)
+  termo_doc_matriz <- termo_doc_matriz(text_format)
+  
+  set.seed(1234)
+  wordcloud(words = d$word, freq = d$freq, min.freq = 1,
+            max.words=200, random.order=FALSE, rot.per=0.35, 
+            colors=brewer.pal(8, "Dark2"))
+}
+```
+
+```{r, message=FALSE, warning=FALSE}
+gera_word_cloud(all_discursos_toninho)
+```
+
+```{r, message=FALSE, warning=FALSE}
+gera_word_cloud(all_discursos_pt)
 ```
 
 ```{r, message=FALSE, warning=FALSE}
